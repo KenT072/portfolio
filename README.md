@@ -7,7 +7,7 @@ Informatics undergraduate at Petra Christian University with an interest in web 
 
 ### 1. Baby Dragon - Computer Graphics Project
 
-**Type:** University Group Project
+**Type:** Grafkom Project
 
 **Technologies:** JavaScript, WebGL, HTML, CSS
 
