@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Baby Dragon · Visual Revision 02</title>
+        <link rel="stylesheet" href="style.css?v=6" />
+    </head>
+    <body>
+        <canvas id="scene" aria-label="Baby Dragon 3D interaktif"></canvas>
+        <header>
+            <a class="brand" href="./"
+                ><span class="mark">◆</span> DRAGON VALLEY <span class="divider">/</span>
+                <span class="muted">GRAFKOM</span></a
+            >
+            <div class="tag"><i></i> PURE WEBGL · REV 02</div>
+        </header>
+        <main class="intro">
+            <div class="eyebrow">CLASH OF CLANS · CHARACTER STUDY</div>
+            <h1>Small wings.<br /><em>Big adventure.</em></h1>
+            <p>
+                Baby Dragon menjelajahi lembah.<br />Satu kepakan, satu petualangan baru.
+            </p>
+            <div class="chapter">
+                <span id="chapterNumber">01</span>
+                <div>
+                    <small>THE FIRST FLIGHT</small
+                    ><strong id="chapter">Bersiap terbang</strong>
+                </div>
+            </div>
+        </main>
+        <aside id="inspector" hidden>
+            <div class="panel-top">
+                <h2>Pemeriksaan rubrik</h2>
+                <button id="closeInspector" aria-label="Tutup panel">×</button>
+            </div>
+            <p>Pilih mode untuk mengamati satu konsep.</p>
+            <label for="mode">Mode animasi</label
+            ><select id="mode">
+                <option value="story">Storyline · 60 detik</option>
+                <option value="translate">Translate · melayang menyamping</option>
+                <option value="rotate">Rotate · putaran sumbu Y</option>
+                <option value="scale">Scaling · ukuran badan</option>
+                <option value="arbitrary">Arbitrary axis · kepakan sayap</option>
+                <option value="hierarchy">Hierarchy · badan dan sayap</option>
+                <option value="still">Pose diam · inspeksi bentuk</option>
+            </select>
+            <p id="modeInfo"></p>
+            <div class="rule"></div>
+            <label class="check"
+                ><input type="checkbox" id="highlight" /> Sorot paraboloid mulut</label
+            ><label class="check"
+                ><input type="checkbox" id="wire" /> Wireframe karakter</label
+            ><label class="check"
+                ><input type="checkbox" id="axes" /> Tampilkan sumbu sendi sayap</label
+            >
+            <dl>
+                <dt>Ellipsoid</dt>
+                <dd>Badan, mata, lengan, kaki</dd>
+                <dt>Cone</dt>
+                <dd>Tanduk, cakar, duri</dd>
+                <dt>Elliptic paraboloid</dt>
+                <dd>Rongga mulut cekung</dd>
+                <dt>Bézier 3D</dt>
+                <dd>Ekor dan kontur sayap</dd>
+            </dl>
+        </aside>
+        <div id="error" role="alert" hidden></div>
+        <footer>
+            <div class="timeline"><div id="progress"></div></div>
+            <div class="toolbar">
+                <div class="actions">
+                    <button class="primary" id="play">Ⅱ <span>Jeda</span></button
+                    ><button id="restart" title="Ulang dari awal">
+                        ↺ <span>Ulang</span></button
+                    ><button id="fire">✦ <span>Sembur api</span></button>
+                </div>
+                <div class="hint">DRAG · PUTAR <b>/</b> SCROLL · ZOOM</div>
+                <div class="actions">
+                    <button id="reset">Reset kamera</button
+                    ><button id="inspect" aria-expanded="false">
+                        Rubrik <span>↗</span></button
+                    ><button
+                        id="cinema"
+                        title="Sembunyikan UI; tekan H untuk mengembalikan"
+                    >
+                        H
+                    </button>
+                </div>
+            </div>
+        </footer>
+        <div class="credit">
+            BABY DRAGON <span>Fan-made educational project · Unofficial</span>
+        </div>
+        <script src="libs.js?v=6"></script>
+        <script src="js/geometry.js?v=6"></script>
+        <script src="js/renderer.js?v=6"></script>
+        <script src="js/dragon.js?v=6"></script>
+        <script src="js/main.js?v=6"></script>
+    </body>
+</html>

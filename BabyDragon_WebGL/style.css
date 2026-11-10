@@ -1,0 +1,434 @@
+:root {
+    color-scheme: dark;
+    --paper: #edf4df;
+    --muted: #9faea5;
+    --lime: #cef98b;
+    --line: #ffffff24;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #17282a;
+    color: var(--paper);
+    font:
+        14px/1.5 system-ui,
+        -apple-system,
+        "Segoe UI",
+        sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    touch-action: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.brand {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.mark {
+    color: var(--lime);
+    margin-right: 12px;
+}
+
+.divider {
+    margin: 0 15px;
+    color: #839b91;
+}
+
+.muted {
+    color: #9bb3a7;
+    font-size: 10px;
+}
+
+.tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    padding: 8px 13px;
+}
+
+.tag i {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: var(--lime);
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.intro {
+    position: absolute;
+    top: 21%;
+    left: 40px;
+    pointer-events: none;
+    max-width: 360px;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.2px;
+    color: var(--lime);
+}
+
+h1 {
+    font-size: clamp(32px, 3.6vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    font-weight: 550;
+    margin: 18px 0;
+}
+
+h1 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    color: var(--lime);
+}
+
+.intro p {
+    font-size: 12px;
+    color: #b5c7b8;
+    line-height: 1.9;
+}
+
+.chapter {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 36px;
+}
+
+.chapter > span {
+    font-family: Georgia, serif;
+    color: var(--lime);
+    font-size: 32px;
+}
+
+.chapter div {
+    border-left: 1px solid #b1d9ac40;
+    padding-left: 15px;
+}
+
+.chapter small {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #9bb3a7;
+}
+
+.chapter strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+footer {
+    position: absolute;
+    bottom: 28px;
+    left: 40px;
+    right: 40px;
+}
+
+.timeline {
+    height: 2px;
+    background: #ffffff18;
+    margin-bottom: 18px;
+}
+
+#progress {
+    height: 100%;
+    background: var(--lime);
+    width: 0;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+button,
+select {
+    font: inherit;
+    color: inherit;
+    background: #203331d9;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3c5044;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px;
+}
+
+button.primary {
+    background: var(--lime);
+    color: #203222;
+    border-color: var(--lime);
+}
+
+button span {
+    margin-left: 5px;
+}
+
+.hint {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+    color: #b1c1b1;
+}
+
+.hint b {
+    margin: 0 8px;
+    color: #607b70;
+}
+
+.credit {
+    position: absolute;
+    bottom: 116px;
+    right: 42px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.credit span {
+    display: block;
+    font-size: 8px;
+    color: #99b19e;
+    letter-spacing: 0.6px;
+    margin-top: 5px;
+}
+
+aside {
+    position: absolute;
+    right: 30px;
+    top: 90px;
+    width: 310px;
+    max-height: calc(100vh - 210px);
+    overflow: auto;
+    padding: 22px;
+    background: #122421f5;
+    border: 1px solid #adc79b3a;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px #0005;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.panel-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-top button {
+    border: 0;
+    padding: 0 8px;
+    font-size: 22px;
+    background: none;
+}
+
+aside p,
+aside dd {
+    font-size: 11px;
+    color: #a9bcae;
+}
+
+aside select {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+aside label {
+    font-size: 11px;
+}
+
+#modeInfo {
+    min-height: 45px;
+}
+
+.check {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+    align-items: center;
+}
+
+input {
+    accent-color: var(--lime);
+}
+
+.rule {
+    height: 1px;
+    background: var(--line);
+    margin: 18px 0;
+}
+
+dt {
+    font-size: 11px;
+    color: var(--lime);
+    margin-top: 12px;
+}
+
+dd {
+    margin: 3px 0 0;
+}
+
+#error {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    background: #491e1e;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.cinema header,
+.cinema .intro,
+.cinema footer,
+.cinema .credit,
+.cinema aside {
+    display: none !important;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+    }
+
+    .intro {
+        left: 22px;
+        top: 16%;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        display: none;
+    }
+
+    .intro .eyebrow {
+        max-width: 170px;
+    }
+
+    .chapter {
+        margin-top: 18px;
+    }
+
+    footer {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .hint,
+    .credit {
+        display: none;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+    }
+
+    .actions {
+        gap: 5px;
+    }
+
+    button {
+        font-size: 11px;
+        padding: 9px;
+    }
+
+    .muted,
+    .divider {
+        display: none;
+    }
+
+    aside {
+        right: 15px;
+        top: 75px;
+        width: 285px;
+    }
+
+    .brand {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .intro {
+        top: 13%;
+    }
+
+    .intro h1 {
+        font-size: 27px;
+    }
+
+    .chapter {
+        display: none;
+    }
+
+    .tag {
+        font-size: 8px;
+    }
+
+    .intro .eyebrow {
+        font-size: 7px;
+    }
+
+    .toolbar {
+        justify-content: center;
+    }
+
+    .actions button {
+        padding: 8px 10px;
+    }
+}
